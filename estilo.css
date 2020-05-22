@@ -1,0 +1,140 @@
+* {
+    /*Tudo que for declarado dentro será excluído da página. As config padrões no navegador*/
+    margin: 0;/*Tira os espaço de fora do elemento*/
+    padding:0 ;/**/
+   box-sizing: border-box;/*Começa a contar o elemento da borda interna*/
+}
+
+body {
+    /*background: transparent url('../imagens/fundo.jpg') no-repeat ;*/
+    /*background-size: auto 100vh; Tamanho da tela */
+    background-color: rgb(176, 196, 222);
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color:black;
+    height:100vh ;
+    font-size: 18px;
+}
+/*Mobile First- Se a tela tiver pelo menos 400px carregue este estilos*/
+@media (min-width: 400px) {
+    body {
+        font-size: 16px;
+    }
+@media (min-width: 600px) {
+    body {
+            font-size: 18px;
+    }
+    
+}
+header {
+    display: flex;/*Só enxerga os elementos abaixo do elemento pai*/
+    height:50% ;
+    justify-content: center;
+    align-items: center;/**/
+}
+.menu {
+    background-color:white;
+    position: fixed;/*posiociona o elemento fixo. Por isso usar apenas*/
+    width:100% ;
+    top: 0;/*Só funciona quando o position for declarado*/
+}
+.menu li {
+    list-style:none ;/*Retira os pontos da lista*/
+    text-align: center;
+}
+.menu ul {
+    display: flex;/*Junta os item em uma linh só*/
+    /*justify-content: space-between;Espaço entre as colunas */
+    justify-content: space-around;/*Espaçamento mais alinhado*/
+    
+}
+.menu a {
+    padding: 10px 20px;
+    display: block;
+
+}
+a {
+    text-decoration: none;/*Retira os traços de underlines das tag*/
+    color: black;
+}
+a:hover {
+    text-decoration: underline;/*Quando o se passar o mouse o item selecionado terá underline*/
+
+}
+.site-title, .site-subtitle {
+    text-align: center;
+
+    
+}
+.site-title{
+    font-size:4em ;
+    font-family: 'Righteous', cursive;
+ 
+}
+.site-subtitle{
+    font-style: italic;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.8em;
+
+}
+/*h1 {
+    margin: 20px;
+    border:4px orangered solid;
+    padding: 10px;
+    width: 100%;Quando tiver altura e largura iguais teremos um quadrado
+    height: 35%;
+    box-shadow:10px 10px 30px 0 rgba(68, 68, 189, 0.616);Sombra da caixa
+    box-sizing: border-box;
+}*/
+
+.portifolio h2 {
+    font-family: 'Justos', cursivos; 
+    margin-bottom: 1.5em;
+    font-size: 2em;
+
+}
+.portifolio {
+    background-color: steelblue;
+    padding: 2em;
+    height:100% ;
+
+}
+.portifolio .grid {/**/
+    display: grid;/**/
+    gap: 2em;/*espaço entre os elementos da grid*/
+}
+@media (min-width: 560px) {
+    .portifolio .grid {
+    grid-template-columns:240px 240px;
+    }
+}
+@media (min-width: 880px) {
+    .portifolio .grid {
+    align-content:center ;
+    grid-template-columns:240px 240px 240px;
+    justify-content: center;
+    height: calc (100% - 8em -48px);
+    
+    }
+}
+@media (min-width: 1000px) {
+    .portifolio .grid {
+    grid-template-columns:repeat(2, 250px);/*repeat:Repete os valores */
+    }
+}
+.portifolio figure {
+    text-align: center;
+
+}
+.img-portifolio {
+    width: 180px;
+    height: 240px;
+    object-fit: cover;/*Ajusta a imagem sem deformar a imagem*/
+    border-radius:10%;/*Aredonda a borda da imagem*/
+}
+@media (min-width: 1000px) {
+    .img-portifolio {
+    height: 10em;
+        }
+
+    }
+}
